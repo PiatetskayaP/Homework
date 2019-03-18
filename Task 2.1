@@ -10,22 +10,21 @@ public class Runner {
 		System.out.println("Введите номер квартиры");
 		int ap = sc.nextInt();
 
-		if (1 <= ap && ap <= 36) {
-			System.out.println("Первый подъезд");
-		} else if (36 < ap && ap <= 72) {
-			System.out.println("Второй подъезд");
-		} else if (72 < ap && ap <= 108) {
-			System.out.println("Третий подъезд");
-		} else if (108 < ap && ap <= 144) {
-			System.out.println("Четвертый подъезд");
-		} else {
+		if (144 < ap || ap < 1) {
 			System.out.println("Такой квартиры в данном доме не существует");
+		} else {
+
+			int floor = (ap - 1) % 36 / 4;
+			floor = floor + 1;
+
+			System.out.println("Этаж номер " + floor);
+
+			int entrance = (ap - 1) / 36;
+			entrance = entrance + 1;
+
+			System.out.println("Подъезд номер " + entrance);
+
 		}
 
-		int floor = (ap - 1) % 36 / 4;
-		floor = floor + 1;
-
-		System.out.println("Этаж номер " + floor);
 	}
-
 }
