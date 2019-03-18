@@ -1,0 +1,26 @@
+package task.number.four.level.two;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Insert number, that consists from six symbols");
+		int number = sc.nextInt();
+		int partOne = number / 100000;
+		int partTwo = number % 100000 / 10000;
+		int partThree = number % 10000 / 1000;
+		int partFour = number % 1000 / 100;
+		int partFive = number % 100 / 10;
+		int partSix = number % 10;
+
+if (partOne == partSix && partTwo == partFive && partThree == partFour) {
+	System.out.println("Число является палиндромом");
+} else {
+	System.out.println("Число не палиндром");
+}
+	};
+
+}
