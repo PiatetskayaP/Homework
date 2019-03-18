@@ -1,0 +1,27 @@
+package task.number.four.level.one;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		double a;
+		System.out.println("Введите первую сторону треугольника");
+		a = sc.nextDouble();
+
+		double b;
+		System.out.println("Введите вторую сторону треугольника");
+		b = sc.nextDouble();
+
+		double c;
+		System.out.println("Введите третью сторону треугольника");
+		c = sc.nextDouble();
+
+		if ((a + b) > c && (a + c) > b && (c + b) > a) {
+			System.out.println("Такой треугольник существует");
+		} else {
+			System.out.println("Такой треугольник не существует");
+		}
+	}
