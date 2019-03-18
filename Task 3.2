@@ -1,0 +1,28 @@
+package task.number.three.level.two;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Insert ticket number");
+		int number = sc.nextInt();
+		int partOne = number / 1000;
+		int partTwo = number % 1000 / 100;
+		int partThree = number % 100 / 10;
+		int partFour = number % 10;
+
+		int firstSum = partOne + partTwo;
+		int secondSum = partThree + partFour;
+
+		if (firstSum == secondSum || (firstSum / 10 + firstSum % 10) == (secondSum / 10 + secondSum % 10)) {
+			System.out.println("Lucky ticket, today is your day :)");
+		} else {
+			System.out.println("Not lucky ticket, good luck next time");
+		}
+
+	}
+
+}
