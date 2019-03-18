@@ -1,0 +1,26 @@
+package task.number.one.level.two;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+
+		int radius = 4;
+		System.out.println("Введите координату х");
+		double x = sc.nextInt();
+
+		System.out.println("Введите координату y");
+		double y = sc.nextInt();
+
+		double thirdSide = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+		if (thirdSide <= radius) {
+			System.out.println("Точка лежит внутри круга");
+		} else {
+			System.out.println("Точка в круг не попадает");
+		}
+	}
+
+}
