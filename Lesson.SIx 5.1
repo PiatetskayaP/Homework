@@ -1,0 +1,16 @@
+package task.five;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String a = "Hello user, nice to meet you";
+		System.out.println(words(a));
+
+	}
+
+	public static int words(String a) {
+		String[] text = a.split("[ ]");
+		return text.length;
+	}
+}
