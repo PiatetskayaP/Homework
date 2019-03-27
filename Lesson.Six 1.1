@@ -1,0 +1,23 @@
+package task.one;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] b = new int[] { 5, 8, 25, 3, 15, 7, 2, 19 };
+		System.out.println(max(b));
+
+	}
+
+	public static int max(int[] a) {
+		int maximum = 0;
+		for (int i = 0; i < a.length; i++) {
+			a[0] = maximum;
+			if (a[i] > maximum) {
+				maximum = a[i];
+			}
+		}
+		return maximum;
+	}
+}
