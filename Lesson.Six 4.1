@@ -1,0 +1,22 @@
+package task.four;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] c = new int[] { 10, 3, 14, 6, 8, 5, 11 };
+		System.out.println(presence(c, 22));
+
+	}
+
+	public static int presence(int[] a, int b) {
+		int x = -1;
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == b) {
+				x = i;
+			}
+		}
+		return x;
+	}
+
+}
