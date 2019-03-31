@@ -1,0 +1,22 @@
+package task.one.level.one;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Calendar cl = Calendar.getInstance();
+		Calendar clTwo = Calendar.getInstance();
+
+		Date dateOne = cl.getTime();
+
+		clTwo.add(Calendar.MONTH, -1);
+		Date dateTwo = clTwo.getTime();
+
+		System.out.println(dateOne.getTime() - dateTwo.getTime());
+
+	}
+
+}
