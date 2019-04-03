@@ -1,0 +1,28 @@
+package task.one.l.one;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите текст");
+		String text = sc.nextLine();
+		
+		File file = new File("mytext.txt");
+		saveToFile(file, text);
+
+	}
+
+	public static void saveToFile(File file, String text) {
+		try (PrintWriter pw = new PrintWriter(file)) {
+			pw.println(text);
+		} catch (IOException e) {
+			// TODO: handle exception
+		}
+	}
+}
